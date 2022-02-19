@@ -1,0 +1,19 @@
+{
+  "name": "microservices",
+  "version": "1.0.0",
+  "description": "This is the backend template for microsercies structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvislive/microservices.git"
+  },
+  "author": "Rakesh Vishwakarma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvislive/microservices/issues"
+  },
+  "homepage": "https://github.com/rvislive/microservices#readme"
+}

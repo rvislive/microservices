@@ -1,0 +1,162 @@
+
+/microservices
+    .server.js
+    .Dockerfile
+    .gitignore
+    .package.json
+    .package-lock.json
+    .eslintignore
+    .eslintrc.yml
+    /.husky
+        .gitignore
+        .pre-commit
+    /node_modules
+    /public
+        /docs : That contains documents that are used in the project. eg, .xmlx, .pdf, .docx etc files.
+        /html : Only HTML files, eg: email.ejs
+        /img : Only Images, Logo files eg: logo.png, author.jpg
+        /css : if there are any css required to design email.ejs inside html folder
+    
+    /server
+        /apis
+            /controller
+                .index.js : Every Controller will pass from this index.js. 
+                /assessment
+                    .assessment.controller.js
+                /claim
+                    .claim.controller.js
+                /documents
+                    .documents.controller.js
+                /policy
+                    .policy.controller.js
+                /quote
+                    .quote.controller.js
+
+            /models
+                .index.js 
+                /assessment
+                    .assessment.model.js
+                    .partsInfoAssessment.model.js
+                    .purchaseInfoAssessment.model.js
+                    .laborInfoAssessment.model.js
+                    .miscellaneousInfoAssessment.model.js
+                    .invoiceDetailsAssessment.model.js
+                    .diagnosticFeeAssessment.model.js
+
+                /claim
+                    .claim.model.js
+                    .globelUniqueIds.model.js
+
+                /documents
+                    .document.model.js
+
+                /policy
+                    .policy.model.js
+
+                /quote
+                    .laborInfo.model.js
+                    .miscellaneousInfo.model.js
+                    .partsInfo.model.js
+                    .purchaseInfo.model.js
+                    .quote.model.js
+                    .workItem.model.js
+            
+            /routes
+                .assessment.routes.js : All API of assessment are here
+                .claim.routes.js
+                .documents.routes.js
+                .policy.routes.js
+                .quote.routes.js
+            
+            /service
+                /assessment
+                    .assessment.service.js
+                /claim
+                    .claim.service.js
+                /documents
+                    .document.service.js
+                /policy
+                    .policy.service.js
+                /quote
+                    .quote.service.js
+            
+            /validator
+                .assessment.validator.js
+                .claim.validator.js
+                .documents.validator.js
+                .policy.validator.js
+                .quote.validator.js
+
+            /ymlDocs
+                .assessment.yml
+                .claim.yml
+                .documents.yml
+                .policy.yml
+                .quote.yml
+            
+        /base
+            .base.controller.js : All the base function of controller
+            .base.proxy.js : All the base function of proxy
+            .base.service : All the base function of service
+            .base.model : (NEW) All curd operation of all modules
+            .error.service: if required
+
+        /config
+            index.js
+            /env
+                .local.js
+                .dev.js
+                .qa.js
+                .test.js
+            /libs
+                .aws.js
+                .emailer.js
+                .multer.js
+                .logger.js
+                .mongoose.js
+                .pdfGenerator.js
+                .postgresql.js
+                .redis.js
+            /auth
+                .authMiddleware.js
+
+        /constant
+            .header.js
+            .msg.js
+            .schema.js
+            .stage.js
+            .status.js
+            .responceMsg.js
+
+        /proxy
+            .audit.proxy.js
+            .claims.proxy.js
+            .communication.proxy.js
+            .gc.proxy.js
+            .masters.proxy.js
+            .token.proxy.js
+        
+        /utils
+            .utils.js
+            /parser
+                .excelParser.js
+            /validators
+                .jsonValidation.js
+                .tariffValidation.js
+
+        .routes.js
+    
+    /tests
+        /test
+            .assessment.test.js
+            .claim.test.js
+            .document.test.js
+            .policy.test.js
+            .quote.test.js
+
+        /requests 
+            .assessment.request.js
+            .claim.request.js
+            .document.request.js
+            .policy.request.js
+            .quote.request.js
